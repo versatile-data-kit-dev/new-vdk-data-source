@@ -1,0 +1,22 @@
+# Copyright 2021 VMware, Inc.
+# SPDX-License-Identifier: Apache-2.0
+
+image: "python:3.7"
+
+.build-vdk-{{cookiecutter.plugin_name}}:
+  variables:
+    PLUGIN_NAME: vdk-{{cookiecutter.plugin_name}}
+  extends: .build-plugin
+
+build-py37-vdk-{{cookiecutter.plugin_name}}:
+  extends: .build-vdk-{{cookiecutter.plugin_name}}
+  image: "python:3.7"
+
+build-py311-vdk-{{cookiecutter.plugin_name}}:
+  extends: .build-vdk-{{cookiecutter.plugin_name}}
+  image: "python:3.11"
+
+release-vdk-{{cookiecutter.plugin_name}}:
+  variables:
+    PLUGIN_NAME: vdk-{{cookiecutter.plugin_name}}
+  extends: .release-plugin

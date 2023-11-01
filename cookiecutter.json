@@ -1,0 +1,6 @@
+  {
+    "plugin_name": "my-plugin-name",
+    "__plugin_module_name": "{{ cookiecutter.plugin_name|lower|replace('-', '_') }}",
+    "__plugin_source_class_name": "{{ cookiecutter.plugin_name.lower().replace('-', ' ').replace('_', ' ').split(' ')|map('capitalize')|join }}",
+    "short_description": "Simple description of my project."
+  }

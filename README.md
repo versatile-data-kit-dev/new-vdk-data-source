@@ -25,7 +25,8 @@ cookiecutter https://github.com/versatile-data-kit-dev/new-vdk-data-source.git
 
 Then
 
-* Include your implementation files inside the `src` folder;
+* Follow all the **TODO** in the code files and README and complete them. 
+* Include extra your implementation files inside the `src` folder; Follow the 
 * Include any tests inside the `tests` so they can be ran by CI framework automatically.
 
 
